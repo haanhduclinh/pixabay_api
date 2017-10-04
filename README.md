@@ -1,5 +1,5 @@
 # Pixabay_api
-[![Gem Version](https://badge.fury.io/rb/pixabay_api.svg)](https://badge.fury.io/rb/pixabay_api) [![Code Climate](https://codeclimate.com/github/haanhduclinh/s3-to-ftp.png)](https://codeclimate.com/github/haanhduclinh/s3-to-ftp) [![CI](https://travis-ci.org/haanhduclinh/pixabay_api.svg?branch=master)](https://travis-ci.org/haanhduclinh/pixabay_api) [![Coverage Status](https://coveralls.io/repos/github/haanhduclinh/pixabay_api/badge.svg?branch=master)](https://coveralls.io/github/haanhduclinh/pixabay_api?branch=master)
+[![Gem Version](https://badge.fury.io/rb/pixabay_api.svg)](https://badge.fury.io/rb/pixabay_api) [![Code Climate](https://codeclimate.com/github/haanhduclinh/pixabay_api.png)](https://codeclimate.com/github/haanhduclinh/pixabay_api) [![CI](https://travis-ci.org/haanhduclinh/pixabay_api.svg?branch=master)](https://travis-ci.org/haanhduclinh/pixabay_api) [![Coverage Status](https://coveralls.io/repos/github/haanhduclinh/pixabay_api/badge.svg?branch=master)](https://coveralls.io/github/haanhduclinh/pixabay_api?branch=master)
 
 # Background
 - Use PixaBayApi to get image data from pixabay.com follow API - https://pixabay.com/api/docs/. 
