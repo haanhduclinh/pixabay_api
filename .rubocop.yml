@@ -1,0 +1,40 @@
+AllCops:
+  TargetRubyVersion: 2.3
+  Exclude:
+    - 'examples/**/*'
+    - 'Gemfile'
+
+Rails:
+  Enabled: false
+
+Metrics/BlockLength:
+  ExcludedMethods: ['describe', 'context', 'before', 'shared_context']
+
+Documentation:
+  Enabled: false
+Style/RaiseArgs:
+  EnforcedStyle: compact
+# Maximum line length
+LineLength:
+  Max: 100
+
+# Use "postfix if/unless" if the lenght is less than this
+IfUnlessModifier:
+  MaxLineLength: 80
+
+# Maximum method length
+MethodLength:
+  Max: 30
+
+# Tune to MethodLength
+Metrics/AbcSize:
+  Max: 30
+
+# Tune to MethodLength
+Metrics/ClassLength:
+  Max: 200
+
+Metrics/BlockLength:
+  ExcludedMethods: ['describe', 'context', 'before', 'shared_context']
+  Exclude:
+    - "**/*_spec.rb"
