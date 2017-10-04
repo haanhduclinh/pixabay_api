@@ -39,6 +39,12 @@ RSpec.shared_context 'shared api', shared_context: :metadata do
       status: 200
     )
 
+    stub_url_test = 'https://pixabay.com/api/?image_type=photo&key=xxxxxx-xxxxxxxxx&q=test%20test'
+    stub_request(:get, stub_url_test).to_return(
+      body: return_request,
+      status: 200
+    )
+
     @api = PixabayApi::ImagesApi.new
     @api.find(keyword: 'test')
   end

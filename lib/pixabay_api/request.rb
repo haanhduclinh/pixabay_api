@@ -4,10 +4,12 @@ require 'resolv-replace'
 
 module PixabayApi
   class Request
+    attr_accessor :query
+
     class << self
       def create(api_key:, params: {}, endpoint: 'xxx')
-        query = build_query(api_key, params, endpoint)
-        uri = URI(query)
+        build_query(api_key, params, endpoint)
+        uri = URI(@query)
 
         Net::HTTP.start(uri.host, uri.port, use_ssl: true) do |http|
           request = Net::HTTP::Get.new uri
@@ -15,14 +17,14 @@ module PixabayApi
         end
       end
 
-      private
-
       def build_query(api_key, params, endpoint)
-        "#{endpoint}?key=#{api_key}&#{params_to_s(params)}"
+        @query = "#{endpoint}?key=#{api_key}&#{params_to_s(params)}"
       end
 
+      private
+
       def params_to_s(params)
-        params.map { |k, v| "#{k}=#{v}" }.join('&')
+        URI.encode_www_form(params)
       end
     end
   end

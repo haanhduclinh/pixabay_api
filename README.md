@@ -1,5 +1,5 @@
 # Pixabay_api
-[![Code Climate](https://codeclimate.com/github/haanhduclinh/s3-to-ftp.png)](https://codeclimate.com/github/haanhduclinh/s3-to-ftp) [![CI](https://travis-ci.org/haanhduclinh/pixabay_api.svg?branch=master)](https://travis-ci.org/haanhduclinh/pixabay_api)
+[![Gem Version](https://badge.fury.io/rb/pixabay_api.svg)](https://badge.fury.io/rb/pixabay_api) [![Code Climate](https://codeclimate.com/github/haanhduclinh/s3-to-ftp.png)](https://codeclimate.com/github/haanhduclinh/s3-to-ftp) [![CI](https://travis-ci.org/haanhduclinh/pixabay_api.svg?branch=master)](https://travis-ci.org/haanhduclinh/pixabay_api) [![Coverage Status](https://coveralls.io/repos/github/haanhduclinh/pixabay_api/badge.svg?branch=master)](https://coveralls.io/github/haanhduclinh/pixabay_api?branch=master)
 
 # Background
 - Use PixaBayApi to get image data from pixabay.com follow API - https://pixabay.com/api/docs/. 
@@ -133,7 +133,7 @@ It will be return picture array
 
 ```ruby
   images_api = PixabayApi::ImagesApi.new
-  options = { id: 999 }
+  options = { category:  'animals', lang: 'vi' }
   picture = images_api.find(keyword: 'test', options: options)
   # or
   pictures = images_api.find_and_return_array(keyword: 'test', options: options)
@@ -178,7 +178,7 @@ videos: https://github.com/haanhduclinh/pixabay_api#search-videos
 |order| str|  How the results should be ordered. Accepted values: "popular", "latest" Default: "popular"|
 |page| int|  Returned search results are paginated. Use this parameter to select the page number. Default: 1|
 |per_page| int|  Determine the number of results per page. Accepted values: 3 - 200 Default: 20|
-|callback| string|  JSONP callback function name|
+|callback| str|  JSONP callback function name|
 |pretty| bool|  Indent JSON output. This option should not be used in production. Accepted values: "true", "false" Default: "false"|
 
 ### Search Videos
@@ -200,7 +200,7 @@ videos: https://github.com/haanhduclinh/pixabay_api#search-videos
 |order| str|  How the results should be ordered. Accepted values: "popular", "latest" Default: "popular"|
 |page| int|  Returned search results are paginated. Use this parameter to select the page number. Default: 1|
 |per_page| int|  Determine the number of results per page. Accepted values: 3 - 200 Default: 20|
-|callback| string|  JSONP callback function name|
+|callback| str|  JSONP callback function name|
 |pretty| bool|  Indent JSON output. This option should not be used in production. Accepted values: "true", "false" Default: "false"|
 
 

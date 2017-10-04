@@ -4,6 +4,14 @@ require './lib/pixabay_api.rb'
 require 'pry'
 require 'webmock/rspec'
 require './spec/supports/shared_api.rb'
+require 'simplecov'
+require 'coveralls'
+
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+  SimpleCov::Formatter::HTMLFormatter,
+  Coveralls::SimpleCov::Formatter
+]
+SimpleCov.start
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

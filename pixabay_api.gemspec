@@ -24,5 +24,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rspec', '~> 3.0'
   s.add_development_dependency 'rubocop', '~> 0.47.1'
   s.add_development_dependency 'pry', '~> 0.11.1'
+  s.add_development_dependency 'simplecov', '>= 0.8.2'
+  s.add_development_dependency 'coveralls', '>= 0.7.0'
   s.add_dependency 'http', '~> 2.2'
 end

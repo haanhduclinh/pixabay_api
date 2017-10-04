@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'cgi'
 require_relative 'error'
 require_relative 'response'
 require_relative 'request'
