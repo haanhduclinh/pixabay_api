@@ -39,7 +39,7 @@ You can configure as below:
 
 # Usage
 
-## get pictures data
+## Get pictures data
 
 ```ruby
   images_api = PixabayApi::ImagesApi.new
@@ -127,6 +127,23 @@ It will be return picture array
 ]
 
 ```
+
+## Get pictures data with options
+- we can use options like below
+
+```ruby
+  images_api = PixabayApi::ImagesApi.new
+  options = { id: 999 }
+  picture = images_api.find(keyword: 'test', options: options)
+  # or
+  pictures = images_api.find_and_return_array(keyword: 'test', options: options)
+```
+
+- There are several options for video and image. You can check:
+
+images: https://github.com/haanhduclinh/pixabay_api#search-images
+
+videos: https://github.com/haanhduclinh/pixabay_api#search-videos
 
 ## Get video data and return array_data
 
