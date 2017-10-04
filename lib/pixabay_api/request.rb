@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'resolv-replace'
-require 'cgi'
 
 module PixabayApi
   class Request
@@ -23,7 +22,7 @@ module PixabayApi
       end
 
       def params_to_s(params)
-        CGI.escape(params.map { |k, v| "#{k}=#{v}" }.join('&'))
+        params.map { |k, v| "#{k}=#{v}" }.join('&')
       end
     end
   end

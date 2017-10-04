@@ -33,7 +33,7 @@ RSpec.shared_context 'shared api', shared_context: :metadata do
   end
 
   before do
-    stub_url = 'https://pixabay.com/api/?key=xxxxxx-xxxxxxxxx&q=test%26image_type=photo'
+    stub_url = 'https://pixabay.com/api/?key=xxxxxx-xxxxxxxxx&q=test&image_type=photo'
     stub_request(:get, stub_url).to_return(
       body: return_request,
       status: 200
