@@ -3,12 +3,11 @@ AllCops:
   Exclude:
     - 'examples/**/*'
     - 'Gemfile'
+    - 'bin/*'
+    - '*.gemspec'
 
 Rails:
   Enabled: false
-
-Metrics/BlockLength:
-  ExcludedMethods: ['describe', 'context', 'before', 'shared_context']
 
 Documentation:
   Enabled: false
@@ -35,6 +34,6 @@ Metrics/ClassLength:
   Max: 200
 
 Metrics/BlockLength:
-  ExcludedMethods: ['describe', 'context', 'before', 'shared_context']
+  ExcludedMethods: ['describe', 'context', 'before', 'shared_context', 'let']
   Exclude:
     - "**/*_spec.rb"

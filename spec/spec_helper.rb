@@ -3,7 +3,7 @@
 require './lib/pixabay_api.rb'
 require 'pry'
 require 'webmock/rspec'
-require "./spec/supports/shared_api.rb"
+require './spec/supports/shared_api.rb'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -15,7 +15,7 @@ RSpec.configure do |config|
   end
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
-  config.include_context "shared api", :include_shared => true
+  config.include_context 'shared api', include_shared: true
 
   config.before(:each) do
     PixabayApi.configure do |c|

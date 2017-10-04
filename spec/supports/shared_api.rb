@@ -1,4 +1,6 @@
-RSpec.shared_context "shared api", :shared_context => :metadata do
+# frozen_string_literal: true
+
+RSpec.shared_context 'shared api', shared_context: :metadata do
   let(:return_request) do
     {
       'totalHits' => 500,
